@@ -183,6 +183,13 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Aliases
 alias ls='ls --color'
 alias c='clear'
+alias op='cd ~/Projects && echo "Went to the projects folder"'
+alias oh='cd ~/ && echo "Went back home"'
+# preview with bat
+alias fp='fzf --preview="bat --color=alaways {}"'
+# open neovim with selected file by tab
+alias fv='nvim $(fzf -m --preview="bat --color=aways {}")'
+alias ss='source ~/.zshrc'
 
 # Shell intergrations
 eval "$(fzf --zsh)"
